@@ -43,16 +43,16 @@ const Auth = props => {
     <div className="auth-page">
       <div className="container page">
         <div className="row">
-          <div className="col-md-6 offset-md-3 col-xs-12">
-            <h1 className="text-xs-center">Login</h1>
-            <form onSubmit={handleSubmit}>
+          <div className="col-md-6 offset-md-3 col-lg-6 col-xs-12 wrap-form">
+            <h1 className="text-xs-center">Account Login</h1>
+            <form className="form" onSubmit={handleSubmit}>
               {error && <ErrorMessages errors={error} />}
               <fieldset>
                 <fieldset className="form-group">
                   <input
                     type="email"
                     className="form-control form-control-lg"
-                    placeholfer="Email"
+                    placeholder="Email"
                     onChange={e => setEmail(e.target.value)}
                   />
                 </fieldset>
@@ -60,7 +60,7 @@ const Auth = props => {
                   <input
                     type="password"
                     className="form-control form-control-lg"
-                    placeholfer="Password"
+                    placeholder="Password"
                     onChange={e => setPassword(e.target.value)}
                   />
                 </fieldset>
