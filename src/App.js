@@ -3,16 +3,14 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import Routers from './routers';
 import AuthState from './context/auth/authState.js';
 
-function App() {
+const App = () => {
   return (
     <AuthState>
       <Router>
-        <div className="App">
-          <Routers />
-        </div>
+        <Routers />
       </Router>
     </AuthState>
   );
-}
+};
 
 export default App;
